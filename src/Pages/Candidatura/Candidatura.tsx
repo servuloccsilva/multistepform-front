@@ -5,7 +5,7 @@ import { useForm, FormActions } from '../../Contexts/FormContext'
 import { ChangeEvent, useEffect } from "react"
 
 
-export const Confirm = () => {
+export const Candidatura = () => {
 
     const navigate = useNavigate()
     const { state, dispatch } = useForm()
@@ -13,7 +13,7 @@ export const Confirm = () => {
     useEffect(() => {
         dispatch({
             type:FormActions.setCurrentStep,
-            payload: 4
+            payload: 5
         })
     },[])
 
@@ -36,17 +36,15 @@ export const Confirm = () => {
         <Theme>
             <C.Container>
                 <p>Candidatura</p>
-                <h1>Vamos confirmar todos os seus dados</h1>
-                <p>Aqui voce poderá confirmar ou alterar seus dados enviados.</p>
+                <h1>Vamos ver sua candidatura.</h1>
+                <p>Aqui você pode ver suas informações e editá-las.</p>
 
                 <hr/>
 
-                <h3>Nome: {state.name}</h3>
-                <h3>Experiência: {state.level ===  0 ? 'Iniciante' : 'Sênior'}</h3>
-                <h3>E-mail: {state.email}</h3>
-                <h3>LinkedIn: {state.linkedin}</h3>
+                <div>
+                    Aqui estarão as informações.
+                </div>
 
-                
 
             </C.Container>
         </Theme>

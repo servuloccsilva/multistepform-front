@@ -20,26 +20,6 @@ export const FormStep2 = () => {
                 payload: 2
             })
         }
-        dispatch({
-            type:FormActions.setCurrentStep,
-            payload: 2
-        })
-        dispatch({
-            type:FormActions.setCurrentStep,
-            payload: 2
-        })
-        dispatch({
-            type:FormActions.setCurrentStep,
-            payload: 2
-        })
-        dispatch({
-            type:FormActions.setCurrentStep,
-            payload: 2
-        })
-        dispatch({
-            type:FormActions.setCurrentStep,
-            payload: 2
-        })
     },[])
 
     const handleNextStep = () => {
@@ -57,12 +37,7 @@ export const FormStep2 = () => {
         })
     }
 
-    const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch({
-            type: FormActions.setName,
-            payload: e.target.value
-        })
-    }
+
 
     return (
         <Theme>

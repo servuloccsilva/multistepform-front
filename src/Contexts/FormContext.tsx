@@ -8,6 +8,7 @@ type State = {
     level: 0 | 1
     email: string
     linkedin: string
+    github: string
 }
 
 type Action = {
@@ -31,7 +32,8 @@ const initialData: State = {
     name: '',
     level: 0,
     email: '',
-    linkedin: ''
+    linkedin: '',
+    github: ''
 }
 
 // Context
@@ -43,7 +45,8 @@ export enum FormActions {
     setName,
     setLevel,
     setEmail,
-    setLinkedin
+    setLinkedin,
+    setGithub
 }
 const formReducer = (state: State, action: Action) => {
     switch(action.type) {
@@ -57,6 +60,8 @@ const formReducer = (state: State, action: Action) => {
                 return {...state, email: action.payload}
             case FormActions.setLinkedin:
                 return {...state, linkedin: action.payload}
+            case FormActions.setGithub:
+                return {...state, github: action.payload}
             default:
                 return state
     }

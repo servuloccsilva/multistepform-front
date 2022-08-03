@@ -45,6 +45,7 @@ export const Confirm = () => {
                 <h3>Experiência: {state.level ===  0 ? 'Iniciante' : 'Sênior'}</h3>
                 <h3>E-mail: {state.email}</h3>
                 <h3>LinkedIn: {state.linkedin}</h3>
+                <h3>GitHub: {state.github}</h3>
 
                 
 

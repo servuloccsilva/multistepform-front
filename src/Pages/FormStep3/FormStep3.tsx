@@ -44,6 +44,13 @@ export const FormStep3 = () => {
         })
     }
 
+    const handleGithubChange = (e: ChangeEvent<HTMLInputElement>) => {
+        dispatch({
+            type: FormActions.setGithub,
+            payload: e.target.value
+        })
+    }
+
     return (
         <Theme>
             <C.Container>
@@ -68,6 +75,15 @@ export const FormStep3 = () => {
                     type="url"
                     value={state.linkedin}
                     onChange={handleLinkedinChange}
+                    />
+                </label>
+
+                <label>
+                    Qual seu GitHub?
+                    <input
+                    type="url"
+                    value={state.github}
+                    onChange={handleGithubChange}
                     />
                 </label>
 

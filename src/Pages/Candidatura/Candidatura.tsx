@@ -2,19 +2,29 @@ import * as C from "./styles"
 import { Theme } from '../../Components/Theme/Theme'
 import { useNavigate } from "react-router-dom"
 import { useForm, FormActions } from '../../Contexts/FormContext'
-import { ChangeEvent, useEffect } from "react"
+import { ChangeEvent, useEffect, useState } from "react"
+import axios from "axios"
+import { BASE_URL } from "../../Components/Base_Url/Base_url"
 
-
+type Form = {
+    name:string,
+    level: number,
+    email: string,
+    linkedin: string,
+    github: string
+}
 export const Candidatura = () => {
 
     const navigate = useNavigate()
     const { state, dispatch } = useForm()
+    const [getForm, setGetForm] = useState([]);
 
     useEffect(() => {
         dispatch({
             type:FormActions.setCurrentStep,
             payload: 5
-        })
+        });
+        getForms();
     },[])
 
     const handleNextStep = () => {
@@ -32,6 +42,31 @@ export const Candidatura = () => {
         })
     }
 
+
+    const getForms = () => {
+        axios
+          .get(`${BASE_URL}`)
+          .then((res) => {
+            setGetForm(res.data);
+          })
+          .catch((err) => {
+            
+          });
+      };
+
+      const mapeandoForm = getForm.map((form: Form) => {
+        return (
+            <div>
+                <p>Nome: {form.name}</p>
+                <p>Nível Profissional: {form.level === 0 ? "Júnior" : "Pleno"}</p>
+                <p>E-mail: {form.email}</p>
+                <p>LinkedIn: {form.linkedin}</p>
+                <p>GitHub: {form.github}</p>
+                <br/>
+            </div>
+        )
+      });
+
     return (
         <Theme>
             <C.Container>
@@ -42,7 +77,7 @@ export const Candidatura = () => {
                 <hr/>
 
                 <div>
-                    Aqui estarão as informações.
+                    {mapeandoForm[mapeandoForm.length-1]}
                 </div>
 
 

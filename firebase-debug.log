@@ -1,0 +1,25 @@
+[debug] [2022-08-04T13:56:44.607Z] ----------------------------------------------------------------------
+[debug] [2022-08-04T13:56:44.609Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\servu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-08-04T13:56:44.609Z] CLI Version:   11.4.2
+[debug] [2022-08-04T13:56:44.609Z] Platform:      win32
+[debug] [2022-08-04T13:56:44.610Z] Node Version:  v16.14.1
+[debug] [2022-08-04T13:56:44.610Z] Time:          Thu Aug 04 2022 10:56:44 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-08-04T13:56:44.611Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-04T13:56:44.674Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-04T13:56:44.674Z] > authorizing via signed-in user (servuloccsilva@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\servu\Desktop\Dev\Vagas Dev\TEPPA\multistepform-front
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+

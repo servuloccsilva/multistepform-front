@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+Desafio para Teppa - Teste para Devs Fullstack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação Fullstack utilizando React para o Frontend e Node.js e Express para o Backend.
 
-## Available Scripts
+A aplicação é um formulário multistep onde utilizei as informações passadas por um candidato para enviá-las para o backend e banco de dados e depois mostrá-las na tela uma vez que o cadastro fosse realizado.
 
-In the project directory, you can run:
+Para o Frontend, foi utilizada a linguagem Typescript e o framework React. Também foi utilizado styled-components para a estilização.
 
-### `npm start`
+Já no Backend, foi utilizada a linguagem Typescript junto com o Node.js e Express + Knex para fazer a conexão com o banco de dados MySQL.
+Para construir o backend, utilizei de estratégias de POO e Arquitetura em Camadas para organizar e otimizar o processo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A publicação do back foi feita no Hiroku:
+https://multistepform-servuloccsilva.herokuapp.com
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A publicação do front foi feita no Firebase:
+https://multistep-form-servulo.web.app/
 
-### `npm test`
+A documentação da API se encontra aqui:
+https://documenter.getpostman.com/view/20354118/VUjLJRqS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Aqui estão algumas imagens da Aplicação:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/99182794/182876153-630a2f17-edde-4e6b-a645-ba8bda3533cc.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/99182794/182876253-b79265dc-04ab-4f57-bd63-7436106dfe2a.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://user-images.githubusercontent.com/99182794/182876512-087713a9-598a-48d0-969d-e260e51e5c65.png)
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/99182794/182876567-eee291d3-3497-45a1-91b2-eb38ffebd824.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![image](https://user-images.githubusercontent.com/99182794/182876668-8917a4d7-03e1-426d-8b85-c41c321fb26f.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/99182794/182878971-86fe394e-45eb-4b7f-9b86-c22df466b1d0.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Obs.: O design do front foi feito com base em um vídeo do Bonieky Lacerda no YouTube. As funcionalidades, juntamente com o backend, foram desenvolvidas por mim.

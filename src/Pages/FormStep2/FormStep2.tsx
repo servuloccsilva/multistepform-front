@@ -42,26 +42,34 @@ export const FormStep2 = () => {
     return (
         <Theme>
             <C.Container>
-                <p>Passo 2/3</p>
+                <p>Passo 2</p>
                 <h1>{state.name}, qual seu nível de experiência?</h1>
                 <p>Escolha a opção que melhor descreve sua atual experiência profissional nessa área.</p>
 
                 <hr/>
 
                 <SelectOption 
-                    title="Sou Iniciante"
+                    title="Sou Iniciante - Júnior"
                     description="Experiência de 0-2 anos"
                     icon="👼"
-                    selected={state.level === 0}
-                    onClick={()=>setLevel(0)}
+                    selected={state.level === 1}
+                    onClick={()=>setLevel(1)}
                 />
 
                 <SelectOption 
-                    title="Sou Programador"
-                    description="Experiência de 2 ou mais anos"
+                    title="Tenho Alguma Experiência - Pleno"
+                    description="Experiência de 2 a 5 anos"
                     icon="🧑‍💻"
-                    selected={state.level === 1}
-                    onClick={()=>setLevel(1)}
+                    selected={state.level === 2}
+                    onClick={()=>setLevel(2)}
+                />
+
+                <SelectOption 
+                    title="Sou Experiente - Sênior"
+                    description="Experiência de mais de 5 anos"
+                    icon="😎"
+                    selected={state.level === 3}
+                    onClick={()=>setLevel(3)}
                 />
 
                 

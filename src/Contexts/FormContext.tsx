@@ -5,7 +5,7 @@ import {createContext, ReactNode, useContext, useReducer} from 'react'
 type State = {
     currentStep: number
     name: string
-    level: 0 | 1
+    level: 1 | 2 | 3
     email: string
     linkedin: string
     github: string
@@ -30,7 +30,7 @@ type FormProviderProps = {
 const initialData: State = {
     currentStep: 0,
     name: '',
-    level: 0,
+    level: 1,
     email: '',
     linkedin: '',
     github: ''

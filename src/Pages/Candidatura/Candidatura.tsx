@@ -20,49 +20,50 @@ export const Candidatura = () => {
     const [getForm, setGetForm] = useState([]);
 
     useEffect(() => {
-        dispatch({
-            type:FormActions.setCurrentStep,
-            payload: 5
-        });
+        if(state.name === '') {
+            navigate('/')
+        } else {
+            dispatch({
+                type:FormActions.setCurrentStep,
+                payload: 5
+            })
+        }
         getForms();
     },[])
 
-    const handleNextStep = () => {
-        if(state.name !== '') {
-            navigate('/')
-        } else {
-            alert('Preencha os dados')
-        }
-    }
-
-    const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch({
-            type: FormActions.setName,
-            payload: e.target.value
-        })
-    }
+  
 
 
-    const getForms = () => {
-        axios
-          .get(`${BASE_URL}`)
-          .then((res) => {
+    const getForms = async () => {
+        await axios
+          .get(`${BASE_URL}/candidate`)
+          .then((res:any) => {
             setGetForm(res.data);
           })
-          .catch((err) => {
+          .catch((err:any) => {
+            console.log(err)
             
           });
       };
 
       const mapeandoForm = getForm.map((form: Form) => {
+        const returnExperience = () => {
+            if(form.level === 1) {
+                return "Júnior"
+            } else if (form.level === 2) {
+                return "Pleno"
+            } else {
+                return "Sênior"
+            }
+        }
         return (
-            <div>
+            <div className="formCard">
                 <p>Nome: {form.name}</p>
-                <p>Nível Profissional: {form.level === 0 ? "Júnior" : "Pleno"}</p>
+                <p>Nível Profissional: {returnExperience()}</p>
                 <p>E-mail: {form.email}</p>
                 <p>LinkedIn: {form.linkedin}</p>
                 <p>GitHub: {form.github}</p>
-                <br/>
+                <p>Status da Candidatura: Ativo </p>
             </div>
         )
       });
@@ -72,7 +73,7 @@ export const Candidatura = () => {
             <C.Container>
                 <p>Candidatura</p>
                 <h1>Vamos ver sua candidatura.</h1>
-                <p>Aqui você pode ver suas informações e editá-las.</p>
+                <p>Aqui você pode ver suas informações já eviadas ao nosso banco de dados</p>
 
                 <hr/>
 

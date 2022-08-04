@@ -16,22 +16,8 @@ export const Container = styled.div`
         background-color: #16195C;
         margin: 30px 0;
     }
-    label {
-        font-size: 13px;
-
-        input {
-            display: block;
-            margin-top: 7px;
-            box-sizing: border-box;
-            width: 100%;
-            padding: 20px 10px;
-            border: 2px solid #25CD89;
-            border-radius: 10px;
-            color: #FFF;
-            outline: 0;
-            font-size: 15px;
-            background-color: #02044A;
-        }
+    span {
+        font-weight: normal;
     }
 
     button {
@@ -44,5 +30,27 @@ export const Container = styled.div`
         border-radius: 30px;
         cursor: pointer;
         margin-top: 30px;
+    }
+
+    .formCard {
+        width: 500px;
+        border: 1px solid #16195C;
+        border-radius: 6px;
+        padding: 10px;
+    }
+
+    .backButton {
+        font-size: 16px;
+        text-decoration: none;
+        padding: 20px 40px;
+        color: #B8B8D4;
+        margin-right: 15px;
+        border-radius: 30px;
+        
+        &:hover {
+            background-color: #B8B8D4;
+            color: white;
+            transition: 0.3s;
+        }
     }
 `
